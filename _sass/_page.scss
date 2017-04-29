@@ -5,7 +5,7 @@
 #main {
   @include container;
   @include clearfix;
-  margin-top: 2em;
+  margin-top: 1em;
   padding-left: 1em;
   padding-right: 1em;
   animation: intro 0.3s both;
@@ -270,7 +270,7 @@
   border: 1px solid $light-gray;
   border-radius: $border-radius;
 
-  &:hover {
+    &:hover {
     text-decoration: none;
     color: $link-color-hover;
   }

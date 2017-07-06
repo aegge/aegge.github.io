@@ -236,7 +236,7 @@ $$
   <li style="border:3px; border-style:solid; border-color:#f0f1eb; padding: 5px; padding-left: 20px">
     <p><b>Observational systematics</b></p>
 
-    <p>Survey geometry (optimal estimator?), fiber collisions, ...</p>
+    <p>Survey geometry (window functions), fiber collisions, ...</p>
   </li>
 </ul>
 

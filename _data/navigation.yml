@@ -4,8 +4,10 @@ main:
     url: /
   # - title: "About"
   #   url: /about/
-  # - title: "Research"
-  #   url: /research/
+  - title: "Research"
+    url: /research/
+  # - title: "Presentations"
+  #   url: /presentations/
 
 # sidebar-sample:
 #   - title: "Parent Page A"

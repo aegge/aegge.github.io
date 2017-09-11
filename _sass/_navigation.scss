@@ -220,14 +220,6 @@
       &:current {
         a {
           color: #fff;
-
-          // @if BEDINGUNG {
-          //
-          // Navigation muss neu geladen werden (kann ich mir anders schwer vorstellen)
-          // 1) Abfrage der Url, wenn "/about/" dann about einfaerben
-          // 2) wenn es moeglich ist, einen Parameter mit zu uebergebn, dann nach Parameter entscheiden welches Feld eingefaerbt werdne soll
-          // }
-          //
         }
       }
 
@@ -262,6 +254,12 @@
                 transform: scaleX(1); /* reveal*/
       }
     }
+
+    a.current {
+      //Highlight current menu entry
+      color: $masthead-link-color-hover;
+    }
+
   }
 
   .hidden-links {

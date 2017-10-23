@@ -11,7 +11,7 @@
   -webkit-animation-delay: 0.15s;
           animation-delay: 0.15s;
   z-index: 20;
-  background: #fff;
+  background: #fff;  // background surrounding menu entries
 
   &__inner-wrap {
     @include container;
@@ -27,12 +27,13 @@
 
     nav {
       z-index: 10;
-      background: #fff;
+      background: #fff;  // background of empty space next to menu entries
     }
 
     a {
       text-decoration: none;
     }
+
   }
 }
 
@@ -43,7 +44,7 @@
     padding: 0;
     clear: both;
     list-style-type: none;
-    background: #fff;
+    background: #fff;  // background of menu entries
   }
 }
 

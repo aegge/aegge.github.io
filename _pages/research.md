@@ -12,4 +12,5 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac tu
 
 ## Research Projects
 
-[![alt text]({{ site.url }}{{ site.baseurl }}/assets/images/test.jpg)]({{ site.url }}{{ site.baseurl }}/research/reheating)
+[![alt text]({{ site.url }}{{ site.baseurl }}/assets/images/3p-info.png)]({{ site.url }}{{ site.baseurl }}/research/reheating)
+[![alt text]({{ site.url }}{{ site.baseurl }}/assets/images/inflation.jpg)]({{ site.url }}{{ site.baseurl }}/research/reheating)

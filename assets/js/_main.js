@@ -69,4 +69,37 @@ $(document).ready(function(){
     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
   });
 
+  // function setActiveLink(setActive){
+  //   if ($("a").hasClass('active'))
+  //       $("a").removeClass('active');
+  //   if (setActive)
+  //       $(document.url+setActive).addClass('active');
+  // }
+  //
+  // $(function() {
+  //     $("a").click(function() {
+  //         setActiveLink(this.id);
+  //     });
+  // });
+
+  // $(function(){
+  //   var $page = jQuery.url.attr("file");
+  //   $('ul.visible-links li a').each(function() {
+  //     var $href = $(this).attr('href');
+  //     if(($href == $page) || ($href == '')){
+  //       $(this).addClass('on');
+  //     } else {
+  //       $(this).removeClass('on');
+  //     }
+  //   });
+  // });
+
+  $(function(){
+    $('a').each(function() {
+      if($(this).prop('id') == window.location.href){
+        $(this).addClass('current');
+      }
+    });
+  });
+
 });

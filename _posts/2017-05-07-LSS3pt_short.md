@@ -5,7 +5,7 @@ description:
 theme: serif
 transition: slide
 author_profile: false
-categories: presentation
+categories: presentations
 ---
 
 <style type="text/css">

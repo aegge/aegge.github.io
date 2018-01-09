@@ -1,11 +1,11 @@
 ---
 layout: slide
-title: The One-Loop Galaxy Bispectrum
+title: The One-Loop Galaxy Bispectrum (Sussex)
 description:
 theme: serif
 transition: slide
 author_profile: false
-categories: presentation
+categories: presentations
 ---
 
 <style type="text/css">

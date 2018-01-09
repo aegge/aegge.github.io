@@ -6,7 +6,7 @@ author_profile: false
 
 {% include base_path %}
 {% capture written_year %}'None'{% endcapture %}
-{% for post in site.categories.presentation %}
+{% for post in site.categories.presentations %}
   {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% include presentation-single.html %}
 {% endfor %}

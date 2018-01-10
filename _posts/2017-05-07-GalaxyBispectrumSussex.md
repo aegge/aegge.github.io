@@ -251,7 +251,7 @@ $$
     <p><b>Accurate covariance matrices for large data sets</b></p>
 
     <p>Bispectrum number of triangles scales as `$N_{\Delta} \sim \left(k_{\text{max}}/\Delta k\right)^3$` [power spectrum bins:
-    `$\sim k_{\text{max}}/\Delta k$`]. The number of simulations to estimate `$C_B$` must be _larger_ then
+    `$\sim k_{\text{max}}/\Delta k$`]. The number of simulations to estimate `$C_B$` must be _larger_ than
     `$N_{\Delta}$ $\rightarrow\,{\cal O}(10^4)$`.</p>
   </li>
   <li style="border:3px; border-style:solid; border-color:#f0f1eb; padding: 5px; padding-left: 20px">
@@ -277,7 +277,7 @@ $$
     <p><b>Accurate covariance matrices for large data sets</b></p>
 
     <p>Bispectrum number of triangles scales as `$N_{\Delta} \sim \left(k_{\text{max}}/\Delta k\right)^3$` [power spectrum bins:
-    `$\sim k_{\text{max}}/\Delta k$`]. The number of simulations to estimate `$C_B$` must be _larger_ then
+    `$\sim k_{\text{max}}/\Delta k$`]. The number of simulations to estimate `$C_B$` must be _larger_ than
     `$N_{\Delta}$ $\rightarrow\,{\cal O}(10^4)$`.</p>
   </li>
   <li style="border:3px; border-style:solid; border-color:red; padding: 5px; padding-left: 20px">

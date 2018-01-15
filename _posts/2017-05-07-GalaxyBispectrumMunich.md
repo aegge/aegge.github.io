@@ -113,7 +113,9 @@ with Roman Scoccimarro & Robert E. Smith
 </div>
 
 Note:
-- to extract physics from LSS we measure statistics (don't know the initial conditions)
+- the fundamental observable in LSS is the density field, constructed out of the observed number density of galaxies or other types of objects
+- the density field evolves under influence of the laws of nature and the constiuents in the universe
+- to extract these physics from LSS we measure statistics (don't know the initial conditions)
 
 ---
 
@@ -132,6 +134,11 @@ Note:
 <div style="position: absolute; top: 17em; left: 0.0em; width: 300px; height: 50px;">
   The observed density field is non-Gaussian
 </div>
+
+Note:
+- reason number 1: density is non-Gaussian (if Gaussian all info in P)
+- reason number 2: bispectrum has different parameter dependencies
+- reason number 3: cosmic variance limit
 
 ---
 
@@ -180,7 +187,7 @@ Note:
 
     <p>Bispectrum number of triangles scales as `$N_{\Delta} \sim \left(k_{\text{max}}/\Delta k\right)^3$` [power spectrum bins:
     `$\sim k_{\text{max}}/\Delta k$`]. The number of simulations to estimate `$C_B$` must be _larger_ than
-    `$N_{\Delta}$ $\rightarrow\,{\cal O}(10^4)$`. $\hspace{2em}$ [<span style="color:DarkTurquoise"><b>AE</b>+ '15, <b>AE</b> & Smith '17, Byun, <b>AE</b>+ '17</span>] </p>
+    `$N_{\Delta}$ $\rightarrow\,{\cal O}(10^4)$`. $\hspace{2em}$ [<span style="color:DarkTurquoise"><b>AE</b>+ '15; <b>AE</b> & Smith '17; Byun, <b>AE</b>+ '17</span>] </p>
   </li>
   <li style="border:3px; border-style:solid; border-color:#f0f1eb; padding: 5px; padding-left: 20px">
     <p><b>Complexity of theoretical modelling</b></p>
@@ -206,7 +213,7 @@ Note:
 
     <p>Bispectrum number of triangles scales as `$N_{\Delta} \sim \left(k_{\text{max}}/\Delta k\right)^3$` [power spectrum bins:
     `$\sim k_{\text{max}}/\Delta k$`]. The number of simulations to estimate `$C_B$` must be _larger_ than
-    `$N_{\Delta}$ $\rightarrow\,{\cal O}(10^4)$`. $\hspace{2em}$ [<span style="color:DarkTurquoise"><b>AE</b>+ '15, <b>AE</b> & Smith '17, Byun, <b>AE</b>+ '17</span>] </p>
+    `$N_{\Delta}$ $\rightarrow\,{\cal O}(10^4)$`. $\hspace{2em}$ [<span style="color:DarkTurquoise"><b>AE</b>+ '15; <b>AE</b> & Smith '17; Byun, <b>AE</b>+ '17</span>] </p>
   </li>
   <li style="border:3px; border-style:solid; border-color:red; padding: 5px; padding-left: 20px">
     <p><b>Complexity of theoretical modelling</b></p>
@@ -239,7 +246,43 @@ Note:
 
 # The Modelling Perspective <!-- {_style="text-align: center"}-->
 
-In perturbation theory (PT): relate galaxy density to matter density:
+<ul>
+  <li>
+    goal of **Perturbation Theory (PT)**: expand nonlinear (evolved) density in increasing powers of linear (initial) matter density `$\delta^{(1)}(\boldsymbol{k})$`:
+    <p>
+      `
+      $$
+      \delta(\boldsymbol{k}) = \sum_n \delta^{(n)}(\boldsymbol{k})\,, \hspace{1em} \mathrm{where} \hspace{0.5em} \delta^{(n)}(\boldsymbol{k}) \sim \int {\cal K}(\boldsymbol{k}_1,\ldots,\boldsymbol{k}_n)\,\delta^{(1)}(\boldsymbol{k}_1) \cdots \delta^{(1)}(\boldsymbol{k}_n)
+      $$
+      `
+    </p>
+    <p><span style="color:red"> <b>Assumption:</b> `$\delta^{(1)}$` is Gaussian </span></p> <!-- {_style="text-align: center"}-->
+  </li>
+  <li>
+    <p class="fragment"> use linear power spectrum as building block to construct observables:
+      `
+      $$
+      \begin{align}
+      \\[0.1em]
+      \Rightarrow \hspace{1em} P(k) &= \underbrace{P_{\mathrm{tree}}(k)}_{\langle\delta^{(1)}\delta^{(1)}\rangle} \hspace{0.3em} + \underbrace{P_{\mathrm{1-loop}}(k)}_{\langle\delta^{(1)}\delta^{(3)}\rangle,\hspace{0.25em}\langle\delta^{(2)}\delta^{(2)}\rangle} + \ldots \\[1em]
+      \Rightarrow \hspace{1em} B(k_1,k_2,k_3) &= \underbrace{B_{\mathrm{tree}}(k_1,k_2,k_3)}_{\langle\delta^{(1)}\delta^{(1)}\delta^{(2)}\rangle} \hspace{0.3em} + \underbrace{B_{\mathrm{1-loop}}(k_1,k_2,k_3)}_{\substack{\langle\delta^{(4)}\delta^{(1)}\delta^{(1)}\rangle,\hspace{0.25em}\langle\delta^{(3)}\delta^{(2)}\delta^{(1)}\rangle,\\ \langle\delta^{(2)}\delta^{(2)}\delta^{(2)}\rangle}} + \ldots
+      \end{align}
+      $$
+      `
+    </p>
+  </li>
+</ul>
+
+
+Note:
+  - intend to use PT to describe the clustering of galaxies. What is being done in PT in general is to expand the density in functions, which contain increasing powers of the linear density field
+  - remember from previous slide: Gaussian means that all information is contained in the power spectrum
+
+---
+
+# The Modelling Perspective <!-- {_style="text-align: center"}-->
+
+In the spirit of PT &mdash; relate galaxy density to matter density:
 <span class="fragment" data-fragment-index="1"></span>
 <p>
 `
@@ -270,13 +313,34 @@ $$
   </p>
   <span style="color:#1a3f8b">
     <li class="fragment" data-fragment-index="4">
-      galaxy density should depend on <b>ENVIRONMENT</b> $\rightarrow$ bias due to tidal field [McDonald & Roy '09, Chan+ '12, Baldauf+ '12]
+      galaxy density should depend on <b>ENVIRONMENT</b> $\rightarrow$ bias due to tidal field [McDonald & Roy '09, Chan+ '12, Baldauf+ '12, Mirbabayi+ '15]
     </li>
   </span>
 </ul>
 
 Note:
 - State of the art for the bispectrum stops after second order of bias expansion
+
+--
+
+# Complete Bias Expansion <!-- {_style="text-align: center"}-->
+
+<hr style="height:1em; visibility:hidden;"/>
+
+<p style="border:2px solid black; padding:10px; border-radius:8px">
+  `
+  $$
+  \begin{align}
+  \delta_g(\boldsymbol{x}) &= b_1\,\delta(\boldsymbol{x}) \\
+  &+\frac{b_2}{2}\,\delta^2(\boldsymbol{x}) + \gamma_2\,{\cal G}_2(\boldsymbol{x}|\Phi_v) \\
+  &\hspace{0.23em}+\,\frac{b_3}{3!}\,\delta^3(\boldsymbol{x}) + \gamma_3^{\times}\,\delta(\boldsymbol{x})\,{\cal G}_2(\boldsymbol{x}|\Phi_v) + \gamma_3^-\,\underbrace{\Delta_3{\cal G}(\boldsymbol{x}|\Phi,\Phi_v)}_{=\,{\cal G}_2(\Phi_v)-{\cal G}_2(\Phi)} + \gamma_3\,{\cal G}_3(\boldsymbol{x}|\Phi_v) \\
+  &\hspace{0.23em}+\,\frac{b_4}{4!}\,\delta^4(\boldsymbol{x}) + \gamma_4^{(1)}\,\delta^2(\boldsymbol{x})\,{\cal G}_2(\boldsymbol{x}|\Phi_v) + \gamma_4^{(2)}\,\delta(\boldsymbol{x})\,\Delta_3{\cal G}(\boldsymbol{x}|\Phi,\Phi_v) + \ldots \, \text{(3 terms)}
+  \end{align}
+  $$
+  `
+</p>
+
+[<span style="color:DarkTurquoise">Chan+ '12, Assassi+ '14, Mirbabayi+ '15</span>]
 
 ---
 
@@ -286,6 +350,10 @@ Note:
 
 <img src="/presentations/bspec_BOSSlike_nomodel.png", style="position:relative; top:-35px; height:610px; background:none; border:none; box-shadow:none;"/>
 
+<div style="position: absolute; top: 10em; left: 28.3em; width: 350px; height: 600px; font-size:75%">
+  [Minerva Simulations: <span style="color:DarkTurquoise">Grieb+ '16</span>]
+</div>
+
 ---
 
 <!-- .slide: data-transition="fade-in slide-out"-->
@@ -293,6 +361,10 @@ Note:
 # The State of the Art
 
 <img src="/presentations/bspec_BOSSlike.png", style="position:relative; top:-35px; height:610px; background:none; border:none; box-shadow:none;"/>
+
+<div style="position: absolute; top: 10em; left: 28.3em; width: 350px; height: 600px; font-size:75%">
+  [Minerva Simulations: <span style="color:DarkTurquoise">Grieb+ '16</span>]
+</div>
 
 ---
 
@@ -428,13 +500,13 @@ Note:
 <!-- .slide: data-transition="slide-in fade-out"-->
 # Issues at 1-Loop and Beyond <!-- {_style="text-align: center"}-->
 
-For simplicity consider **local** bias expansion:
+For simplicity consider **local** (in matter) bias expansion:
 
 <div style="position: absolute; top: 6em; left: 50%; width: 500px; height: 600px; margin: 0 0 0 -300px;">
   <p>
     `
     $$
-    \delta_g = \sum_{n=1} \left(\frac{\partial^n \delta_g}{\partial \delta_L^n}\right) \frac{\delta_L^n}{n!} = b_1\,\delta_L + \frac{b_2}{2} \delta_L^2 + \frac{b_3}{3!} \delta_L^3 + \ldots
+    \delta_g = b_1\,\delta_L + \frac{b_2}{2} \delta_L^2 + \frac{b_3}{3!} \delta_L^3 + \ldots = \sum_{n=1}^{\infty} \left(\frac{\partial^n \delta_g}{\partial \delta_L^n}\right) \frac{\delta_L^n}{n!}\,, \hspace{1em} \delta_L \equiv \delta^{(1)}
     $$
     `
   </p>
@@ -445,13 +517,13 @@ For simplicity consider **local** bias expansion:
 <!-- .slide: data-transition="fade-in slide-out"-->
 # Issues at 1-Loop and Beyond <!-- {_style="text-align: center"}-->
 
-For simplicity consider **local** bias expansion:
+For simplicity consider **local** (in matter) bias expansion:
 
 <div style="position: absolute; top: 6em; left: 50%; width: 500px; height: 600px; margin: 0 0 0 -300px;">
   <p>
     `
     $$
-    \delta_g = \sum_{n=1} \left(\frac{\partial^n \delta_g}{\partial \delta_L^n}\right) \frac{\delta_L^n}{n!} = \color{red}b_1\color{black}\,\delta_L + \frac{\color{red}b_2\color{black}}{2} \delta_L^2 + \frac{\color{red}b_3\color{black}}{3!} \delta_L^3 + \ldots
+    \delta_g = \color{red}b_1\color{black}\,\delta_L + \frac{\color{red}b_2\color{black}}{2} \delta_L^2 + \frac{\color{red}b_3\color{black}}{3!} \delta_L^3 + \ldots = \sum_{n=1}^{\infty} \left(\frac{\partial^n \delta_g}{\partial \delta_L^n}\right) \frac{\delta_L^n}{n!}\,, \hspace{1em} \delta_L \equiv \delta^{(1)}
     $$
     `
   </p>
@@ -467,11 +539,14 @@ For simplicity consider **local** bias expansion:
   <p>
     `
     $$
-    \text{e.g.} \quad P_g(k) = b_1^2\,P(k) + \left[b_1 b_3 \langle\delta^2_L\rangle P(k) + \frac{b_2^2}{2} (P \otimes P)(k)\right] + \ldots
+    \text{e.g.} \quad P_g(k) = b_1^2\,P_L(k) + \left[b_1 b_3 \langle\delta^2_L\rangle P_L(k) + \frac{b_2^2}{2} (P_L \otimes P_L)(k)\right] + \ldots
     $$
     `
   </p>
   $\rightarrow \hspace{0.5em}$ requires &quot;<b>renormalization</b>&quot; of bias parameters: `$\hspace{0.5em}b_1^R \equiv b_1 + b_3\frac{\langle\delta^2_L\rangle}{2} + \ldots$`
+  <div style="font-size:75%">
+    $\hspace{2.2em}$[<span style="color:DarkTurquoise">McDonald '07, Schmidt+ '13, Assassi+ '14, Mirbabayi+ '15</span>]
+  </div>
 </div>
 
 <div class="fragment" data-fragment-index="2">
@@ -480,8 +555,8 @@ For simplicity consider **local** bias expansion:
     `
     $$
     \begin{align}
-      \Rightarrow \hspace{0.5em}\left<\frac{\partial \delta_g}{\partial \delta_L}\right> &= b_1 + b_3 \frac{\langle\delta^2_L\rangle}{2} + \ldots = \sum_{n=0}^{\infty} \frac{b_{2n+1}}{n!} \left(\frac{\langle\delta^2_L\rangle}{2}\right)^n \\
-      \Rightarrow \hspace{0.5em}\left<\frac{\partial^2 \delta_g}{\partial \delta_L^2}\right> &= b_2 + b_4 \frac{\langle\delta^2_L\rangle}{2} + \ldots = \sum_{n=0}^{\infty} \frac{b_{2n+2}}{n!} \left(\frac{\langle\delta^2_L\rangle}{2}\right)^n
+      \Rightarrow \hspace{0.5em}b_1^R &= b_1 + b_3 \frac{\langle\delta^2_L\rangle}{2} + \ldots = \sum_{n=0}^{\infty} \frac{b_{2n+1}}{n!} \left(\frac{\langle\delta^2_L\rangle}{2}\right)^n = \left<\frac{\partial \delta_g}{\partial \delta_L}\right> \\
+      \Rightarrow \hspace{0.5em}b_2^R &= b_2 + b_4 \frac{\langle\delta^2_L\rangle}{2} + \ldots = \sum_{n=0}^{\infty} \frac{b_{2n+2}}{n!} \left(\frac{\langle\delta^2_L\rangle}{2}\right)^n = \left<\frac{\partial^2 \delta_g}{\partial \delta_L^2}\right>
     \end{align}
     $$
     `
@@ -495,7 +570,7 @@ For simplicity consider **local** bias expansion:
 <p>
   `
   $$
-  \text{Generalization:} \hspace{0.5em} \frac{\partial^n \delta_g}{\partial \delta_L^n} \hspace{0.5em} \rightarrow \hspace{0.5em} \left<\underbrace{\frac{\partial^n \delta_g(\boldsymbol{k})}{\partial \delta_L(\boldsymbol{k}_1) \cdots \partial \delta_L(\boldsymbol{k}_n)}}\right> \equiv (2\pi)^3\,\Gamma_g^{(n)} \delta_D(\boldsymbol{k}-\boldsymbol{k}_1 - \ldots - \boldsymbol{k}_n)
+  \text{Generalization:} \hspace{0.5em} \frac{\partial^n \delta_g}{\partial \delta_L^n} \hspace{0.5em} \rightarrow \hspace{0.5em} \left<\underbrace{\frac{\partial^n \delta_g(\boldsymbol{k})}{\partial \delta_L(\boldsymbol{k}_1) \cdots \partial \delta_L(\boldsymbol{k}_n)}}\right> \equiv (2\pi)^3\,\Gamma_g^{(n)} \delta_D(\boldsymbol{k}-\boldsymbol{k}_{1\cdots n})
   $$
   `
 </p>
@@ -510,8 +585,8 @@ For simplicity consider **local** bias expansion:
     `
     $$
     \begin{align}
-      \delta_g(\boldsymbol{k}) = &\Gamma_g^{(1)}(\boldsymbol{k})\,\delta_L(\boldsymbol{k}) + \frac{1}{2} \Gamma_g^{(2)}(\boldsymbol{k}_1,\boldsymbol{k}_2) * \Big[\delta_L(\boldsymbol{k}_1)\delta_L(\boldsymbol{k}_2) - \langle\delta_L^2\rangle\Big] \\
-      &\frac{1}{3!}\Gamma_g^{(3)}(\boldsymbol{k}_1,\boldsymbol{k}_2,\boldsymbol{k}_3) * \Big[\delta_L(\boldsymbol{k}_1)\delta_L(\boldsymbol{k}_2)\delta_L(\boldsymbol{k}_3) - \langle\delta_L^2\rangle \delta_L(\boldsymbol{k}_1) - \text{cyc.} - \langle\delta_L^3\rangle\Big] \hspace{-0.3em}+ \ldots
+      \delta_g(\boldsymbol{k}) = &\Gamma_g^{(1)}(\boldsymbol{k})\,\delta_L(\boldsymbol{k}) + \frac{1}{2} \Gamma_g^{(2)}(\boldsymbol{k}_1,\boldsymbol{k}_2) \otimes \Big[\delta_L(\boldsymbol{k}_1)\delta_L(\boldsymbol{k}_2) - \langle\delta_L^2\rangle\Big] \\
+      &\frac{1}{3!}\Gamma_g^{(3)}(\boldsymbol{k}_1,\boldsymbol{k}_2,\boldsymbol{k}_3) \otimes \Big[\delta_L(\boldsymbol{k}_1)\delta_L(\boldsymbol{k}_2)\delta_L(\boldsymbol{k}_3) - \langle\delta_L^2\rangle \delta_L(\boldsymbol{k}_1) - \text{cyc.}\Big] \hspace{-0.3em}+ \ldots
     \end{align}
     $$
     `
@@ -562,35 +637,18 @@ For simplicity consider **local** bias expansion:
   </div>
 </div>
 
---
-
-# Complete Bias Expansion <!-- {_style="text-align: center"}-->
-
-<hr style="height:1em; visibility:hidden;"/>
-
-<p style="border:2px solid black; padding:10px; border-radius:8px">
-  `
-  $$
-  \begin{align}
-  \delta_g(\boldsymbol{x}) &= b_1\,\delta(\boldsymbol{x}) \\
-  &+\frac{b_2}{2}\,\delta^2(\boldsymbol{x}) + \gamma_2\,{\cal G}_2(\boldsymbol{x}|\Phi_v) \\
-  &\hspace{0.23em}+\,\frac{b_3}{3!}\,\delta^3(\boldsymbol{x}) + \gamma_3^{\times}\,\delta(\boldsymbol{x})\,{\cal G}_2(\boldsymbol{x}|\Phi_v) + \gamma_3^-\,\underbrace{\Delta_3{\cal G}(\boldsymbol{x}|\Phi,\Phi_v)}_{=\,{\cal G}_2(\Phi_v)-{\cal G}_2(\Phi)} + \gamma_3\,{\cal G}_3(\boldsymbol{x}|\Phi_v) \\
-  &\hspace{0.23em}+\,\frac{b_4}{4!}\,\delta^4(\boldsymbol{x}) + \gamma_4^{(1)}\,\delta^2(\boldsymbol{x})\,{\cal G}_2(\boldsymbol{x}|\Phi_v) + \gamma_4^{(2)}\,\delta(\boldsymbol{x})\,\Delta_3{\cal G}(\boldsymbol{x}|\Phi,\Phi_v) + \ldots \, \text{(3 terms)}
-  \end{align}
-  $$
-  `
-</p>
-
 ---
 
 <!-- {_style="text-align: center"}-->
 # The 1-Loop Galaxy Bispectrum
 
+In the <b>Multi-point Propagator</b> expansion, there are only three distinct diagrams:
+
 <hr style="height:2.5em; visibility:hidden;"/>
 
 <img src="/presentations/diagrams.png", style="position:relative; top:-35px; left:0em; width:1000px; background:none; border:none; box-shadow:none;"/>
 
-<div style="position: absolute; top: 18em; left: 3.3em; width: 300px; height: 200px;" class="fragment" data-fragment-index="1">
+<div style="position: absolute; top: 22em; left: 3.3em; width: 300px; height: 200px;" class="fragment" data-fragment-index="1">
   `
   $$
   \sim \Gamma_g^{(2)}\,\Gamma_g^{(1)}\,\Gamma_g^{(1)}\,P_L^2
@@ -598,7 +656,7 @@ For simplicity consider **local** bias expansion:
   `
 </div>
 
-<div style="position: absolute; top: 18em; left: 13.8em; width: 300px; height: 200px;" class="fragment" data-fragment-index="1">
+<div style="position: absolute; top: 21.5em; left: 13.8em; width: 300px; height: 200px;" class="fragment" data-fragment-index="1">
   `
   $$
   \sim \int \Big[\Gamma_g^{(2)}\Big]^3\,P_L^3
@@ -606,7 +664,7 @@ For simplicity consider **local** bias expansion:
   `
 </div>
 
-<div style="position: absolute; top: 18em; left: 24.3em; width: 300px; height: 200px;" class="fragment" data-fragment-index="1">
+<div style="position: absolute; top: 21.5em; left: 25.3em; width: 300px; height: 200px;" class="fragment" data-fragment-index="1">
   `
   $$
   \sim \int \Gamma_g^{(3)}\,\Gamma_g^{(2)}\,\Gamma_g^{(1)}\,P_L^3
@@ -623,7 +681,7 @@ For simplicity consider **local** bias expansion:
   `
   $$
   \begin{align}
-  B_g(k_1,k_2,k_3) &= \Big(b_1^R\Big)^3\,B_{\delta}(k_1,k_2,k_3) \\[0.2em] &\fragment{1}{\,+\, \Big(b_1^R\Big)^2\,\Big[b_2^R\,P_L(k_1)\,P_L(k_2) + 2\gamma_2^R\,K(\boldsymbol{k}_1,\boldsymbol{k}_2)\,P_L(k_1)\,P_L(k_2) + \text{cyc.}\Big]} \\[0.2em]
+  B_g(k_1,k_2,k_3) &= \Big(b_1^R\Big)^3\,B_{\text{matter}}(k_1,k_2,k_3) \\[0.2em] &\fragment{1}{\,+\, \Big(b_1^R\Big)^2\,\Big[b_2^R\,P_L(k_1)\,P_L(k_2) + 2\gamma_2^R\,K(\boldsymbol{k}_1,\boldsymbol{k}_2)\,P_L(k_1)\,P_L(k_2) + \text{cyc.}\Big]} \\[0.2em]
   &\fragment{2}{\,+\, \text{37 bias loop integrals}} \\[0.2em]
   &\fragment{3}{\,+\, \epsilon_0\,C_1 + \eta_0\,C_2\,\Big[P_L(k_1) + P_L(k_2) + P_L(k_3)\Big]}
   \end{align}
@@ -722,8 +780,8 @@ For simplicity consider **local** bias expansion:
 
 <img src="/presentations/contours_pk+Bggg_bincorr2_kmax0p20.png", style="position:relative; top:-35px; width:600px; background:none; border:none; box-shadow:none;"/>
 
-<div style="position: absolute; top: 11em; left: 18em; width: 300px; height: 600px;" class="fragment">
-  <h2>It works!</h2>
+<div style="position: absolute; top: 11em; left: 19.5em; width: 300px; height: 600px;" class="fragment">
+  <h2>It's consistent!</h2>
 </div>
 
 

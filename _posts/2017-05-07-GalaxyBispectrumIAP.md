@@ -522,9 +522,11 @@ For simplicity consider **local** (in matter) bias expansion:
   `
 </p>
 
-<div style="position: absolute; top: 8em; left: 9em; width: 200px; height: 600px;"> <!-- {_style="text-align: center"}-->
-  <span style="color:red">scale dependence due to non-localities in bias expansion, e.g. `${\cal G}_2$`</span>
+<div style="position: absolute; top: 7.2em; left: 2.5em; width: 1000px; height: 600px;">
+  <span style="color:red">scale dependence due to environment dependence in bias expansion, e.g. `${\cal G}_2$`</span>
 </div>
+
+<hr style="height:0.8em; visibility:hidden;"/>
 
 <div class="fragment" data-fragment-index="1">
   Modify expansion by using real observables as coefficients:

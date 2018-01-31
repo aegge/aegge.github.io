@@ -670,9 +670,11 @@ For simplicity consider **local** (in matter) bias expansion:
   `
 </p>
 
-<div style="position: absolute; top: 8em; left: 9em; width: 200px; height: 600px;"> <!-- {_style="text-align: center"}-->
+<div style="position: absolute; top: 7.2em; left: 2.5em; width: 1000px; height: 600px;">
   <span style="color:red">scale dependence due to non-localities in bias expansion, e.g. `${\cal G}_2$`</span>
 </div>
+
+<hr style="height:0.8em; visibility:hidden;"/>
 
 <div class="fragment" data-fragment-index="1">
   Modify expansion by using real observables as coefficients:
@@ -922,6 +924,30 @@ In the <b>Multi-point Propagator</b> expansion, there are only three distinct di
   </ul>
 </div>
 
+
+---
+
+<!-- {_style="text-align: center"}-->
+<!-- .slide: data-transition="slide-in fade-out"-->
+# Higher-Derivative Bias
+
+<img src="/presentations/contours_Bggg_loopvsderiv_0p10.png", style="position:relative; top:-25px; width:600px; background:none; border:none; box-shadow:none; font-size:75%"/>
+
+---
+
+<!-- {_style="text-align: center"}-->
+<!-- .slide: data-transition="fade"-->
+# Higher-Derivative Bias
+
+<img src="/presentations/contours_Bggg_loopvsderiv_0p15.png", style="position:relative; top:-25px; width:600px; background:none; border:none; box-shadow:none; font-size:75%"/>
+
+---
+
+<!-- {_style="text-align: center"}-->
+<!-- .slide: data-transition="fade-in slide-out"-->
+# Higher-Derivative Bias
+
+<img src="/presentations/contours_Bggg_loopvsderiv_0p20.png", style="position:relative; top:-25px; width:600px; background:none; border:none; box-shadow:none; font-size:75%"/>
 
 ---
 

@@ -122,7 +122,7 @@ with Roman Scoccimarro & Robert E. Smith
 
 Note:
 - the fundamental observable in LSS is the density field, constructed out of the observed number density of galaxies or other types of objects
-- the density field evolves under influence of the laws of nature and the constiuents in the universe
+- the density field evolves under influence of the fundamental laws of nature and the constituents in the universe
 - to extract these physics from LSS we measure statistics (don't know the initial conditions)
 
 ---
@@ -241,6 +241,9 @@ Note:
   </li>
 </ul>
 
+Note:
+- possible to compress information into smaller set of bins (previous work...)
+
 ---
 
 <!-- .slide: data-background-color="#1a3f8b"-->
@@ -265,6 +268,9 @@ Note:
 <div style="position: absolute; top: 5em; left: 14.8em; width: 400px; height: 150px;">
 [<span style="color:DarkTurquoise">Peebles & Hauser '74</span>]
 </div>
+
+Note:
+- at this point they didn't yet know what they had found (were mostly talking about systematical errors in the paper)
 
 ---
 
@@ -308,6 +314,7 @@ $$
 
 Note:
 - State of the art for the bispectrum stops after second order of bias expansion
+- how to expand the galaxy density to higher orders? Which terms should be included?
 
 ---
 
@@ -328,7 +335,7 @@ Note:
 </p>
 
 <div style="position: absolute; top: 10.3em; left: 11.2em; width: 700px; height: 150px; font-size:80%">
-[<span style="color:DarkTurquoise">Chan+ '12, Assassi+ '14, Marbabayi+ '15, Desjacques+ '16</span>]
+[<span style="color:DarkTurquoise">Chan+ '12, Assassi+ '14, Mirbabayi+ '15, Desjacques+ '16</span>]
 </div>
 
 <p>
@@ -342,7 +349,7 @@ Note:
   \begin{align}
   \fragment{1}{\delta_g(\boldsymbol{x}) = }\hspace{0.5em}& \fragment{1}{b_1\,\delta(\boldsymbol{x}) + \frac{b_2}{2}\,\delta^2(\boldsymbol{x}) + \gamma_2\,{\cal G}_2(\boldsymbol{x}|\Phi_v) \hspace{4em} \leftarrow \; \text{tree-level bias} } \\[0.5em]
   & \fragment{2}{\left.\begin{array}{l} \displaystyle \hspace{-0.3em} + \; \frac{b_3}{3!}\,\delta^3(\boldsymbol{x}) + \gamma_3^{\times}\,\delta(\boldsymbol{x})\,{\cal G}_2(\boldsymbol{x}|\Phi_v) \\[0.5em] \hspace{-0.3em} + \; \gamma_3^-\,\underbrace{\Delta_3{\cal G}(\boldsymbol{x}|\Phi,\Phi_v)}_{=\,{\cal G}_2(\Phi_v)-{\cal G}_2(\Phi)} + \gamma_3\,{\cal G}_3(\boldsymbol{x}|\Phi_v) \quad \\ \hspace{-0.3em} + \; \big[\text{fourth order terms}\big] \end{array}\right\} \hspace{1.6em} \leftarrow \; \text{one-loop bias} } \\[1em]
-  & \fragment{4}{\hspace{-0.3em} \underbrace{\begin{array}{c} + \; \gamma_A\,\nabla^2 \delta(\boldsymbol{x}) + \gamma_B\,\nabla^2{\cal G}_2(\boldsymbol{x}) + \gamma_C\,\nabla^2 \delta^2(\boldsymbol{x}) + \gamma_D\, \left[\boldsymbol{\nabla}\delta(\boldsymbol{x})\right]^2 \\[-2em] \color{#f0f1eb}. \end{array}}_{\displaystyle \sim k^2\,R_L^2} }
+  & \fragment{4}{\hspace{-0.3em} \underbrace{\begin{array}{c} + \; \gamma_A\,\nabla^2 \delta(\boldsymbol{x}) + \gamma_B\,\nabla^2{\cal G}_2(\boldsymbol{x}) + \gamma_C\,\nabla^2 \delta^2(\boldsymbol{x}) + \gamma_D\, \left[\boldsymbol{\nabla}\delta(\boldsymbol{x})\right]^2 \\[-2em] \color{#f0f1eb}. \end{array}}_{\displaystyle \sim k^2\,R_*^2} }
   \end{align}
   $$
   `
@@ -353,8 +360,12 @@ Note:
 
 <div class="fragment" data-fragment-index="4" style="position: absolute; top: 13.4em; left: 9em; width: 390px; height: 275px; font-size:75%;    border:3px; border-style:solid; border-color:red; padding: 10px; border-radius:8px"> </div>
 
-<div class="fragment" data-fragment-index="5" style="position: absolute; top: 29.2em; left: 9em; width: 650px; height: 35px; font-size:75%;    border:3px; border-style:solid; border-color:#1a3f8b; padding: 10px; border-radius:8px"> </div>
+<div class="fragment" data-fragment-index="5" style="position: absolute; top: 29.4em; left: 9em; width: 650px; height: 35px; font-size:75%;    border:3px; border-style:solid; border-color:#1a3f8b; padding: 10px; border-radius:8px"> </div>
 
+Note:
+- all terms that should be included are either of local or non-local type
+- the former derive from second derivatives of the gravitational potential (equivalence principle), only involves the Hubble time scale that governs the evolution of the matter field itself
+- the latter can include feedback effects (open question how important for which type of tracer, i.e. quasars might have very large R_L due to outflows) and velocity bias, introduces additional spatial scale into perturbative expansion, which provides a fundamental cutoff for the theory (below R_L all higher-derivative terms become important and the theory looses all predictivity)
 
 ---
 
@@ -461,6 +472,9 @@ Note:
   [Minerva Simulations: <span style="color:DarkTurquoise">Grieb+ '16</span>]
 </div>
 
+Note:
+- mention covariance matrix being shot noise dominated, so we are able to invert by just using the diagonal
+
 ---
 
 <!-- .slide: data-transition="slide-in fade-out"-->
@@ -501,6 +515,10 @@ Note:
     </li>
   </ul>
 </div>
+
+Note:
+- explain how we obtained the "true" linear bias from the simulations
+- black dashed line for b2 is PBS prediction (based on a fit obtained through measurements from separate universe simulations)
 
 ---
 
@@ -584,6 +602,9 @@ Note:
   </ul>
 </div>
 
+Note:
+- orange contours moving away from B might be because P has higher S/N
+
 ---
 
 <!-- .slide: data-background-color="#1a3f8b"-->
@@ -606,6 +627,9 @@ For simplicity consider **local** (in matter) bias expansion:
     `
   </p>
 </div>
+
+Note:
+- not surprising as bias parameters defined in terms of normal derivatives after all, observables are defined in terms of expectation values
 
 ---
 
@@ -658,6 +682,10 @@ For simplicity consider **local** (in matter) bias expansion:
   </p>
 </div>
 
+Note:
+- relation keeps changing when going to higher orders in the bias expansion
+- perhaps more physical to expand using observable bias parameters
+
 ---
 
 ## Multi-point Propagator Expansion <!-- {_style="text-align: center"}-->
@@ -671,7 +699,7 @@ For simplicity consider **local** (in matter) bias expansion:
 </p>
 
 <div style="position: absolute; top: 7.2em; left: 2.5em; width: 1000px; height: 600px;">
-  <span style="color:red">scale dependence due to non-localities in bias expansion, e.g. `${\cal G}_2$`</span>
+  <span style="color:red">scale dependence due to environment dependence in bias expansion, e.g. `${\cal G}_2$`</span>
 </div>
 
 <hr style="height:0.8em; visibility:hidden;"/>
@@ -734,6 +762,13 @@ For simplicity consider **local** (in matter) bias expansion:
   </div>
 </div>
 
+Note:
+- can think of the Gamma's as scale-dependent bias parameters
+- should stress that the expansion in Gamma's is exactly **equivalent** to the normal one, but after renormalization!
+- the expansion is such that all divergencies (variances of deltaL) cancel out
+- mention how the Gamma's are being evolved
+- each Gamma's contains contributions from all orders of perturbation theory
+
 ---
 
 <!-- {_style="text-align: center"}-->
@@ -768,6 +803,10 @@ In the <b>Multi-point Propagator</b> expansion, there are only three distinct di
   $$
   `
 </div>
+
+Note:
+- integrals over Gamma's and linear power spectra
+- vertex loops already included in the Gamma's (e.g. 411 diagram included in the tree diagram)
 
 ---
 
@@ -804,6 +843,10 @@ In the <b>Multi-point Propagator</b> expansion, there are only three distinct di
 <p style="color:red" class="fragment" data-fragment-index="6">
   `$\Rightarrow \hspace{0.3em}$` 10 free parameters for joint power spectrum and bispectrum analysis
 </p>
+
+Note:
+- form of noise term motivated by divergencies when one of the wavemodes goes to zero (large-scale limit)
+- assumption for fourth order bias terms probably ok, as they only enter through one of the diagrams and the amplitude of the loop integral is quite suppressed compared to the ones involving third order bias parameters
 
 ---
 
@@ -884,6 +927,10 @@ In the <b>Multi-point Propagator</b> expansion, there are only three distinct di
 <div id="rotate90" style="position: absolute; top: 13.5em; left: 1em; color:red"> one-loop </div>
 <div id="rotate90" style="position: absolute; top: 22.5em; left: 1em; color:#f5d328"> noise </div>
 
+Note:
+- mention consistency
+- note constraining power on third order bias parameters, perhaps not all of them are necessary
+
 ---
 
 <!-- .slide: data-transition="slide-in fade-out"-->
@@ -924,6 +971,120 @@ In the <b>Multi-point Propagator</b> expansion, there are only three distinct di
   </ul>
 </div>
 
+---
+
+<!-- {_style="text-align: center"}-->
+# Bias Expansion
+
+<div></div>
+
+<p>
+  `
+  $$
+  \begin{array}{c}\text{galaxy} \\[-0.3em]\text{abundance}\end{array} \quad \Leftarrow \quad
+  \color{red}\begin{array}{c}\text{local gravitational}\\[-0.3em]\text{effects}\end{array}
+  \color{black} \quad + \quad \color{#1a3f8b}
+  \begin{array}{c}\text{matter distribution within}\\[-0.3em]\text{Lagrangian radius of halos}\\[-0.3em] \text{(non-local)} \end{array}
+  $$
+  `
+</p>
+
+<div style="position: absolute; top: 10.3em; left: 11.2em; width: 700px; height: 150px; font-size:80%">
+[<span style="color:DarkTurquoise">Chan+ '12, Assassi+ '14, Mirbabayi+ '15, Desjacques+ '16</span>]
+</div>
+
+<p>
+  <hr style="height:0.8em; visibility:hidden;"/>
+</p>
+
+<p>
+  `
+  $$
+  \newcommand\mystrut[1]{\vrule width0pt height0pt depth#1\relax}
+  \begin{align}
+  \delta_g(\boldsymbol{x}) = \hspace{0.5em}& b_1\,\delta(\boldsymbol{x}) + \frac{b_2}{2}\,\delta^2(\boldsymbol{x}) + \gamma_2\,{\cal G}_2(\boldsymbol{x}|\Phi_v) \hspace{4em} \leftarrow \; \text{tree-level bias} \\[0.5em]
+  & \left.\begin{array}{l} \displaystyle \hspace{-0.3em} + \; \frac{b_3}{3!}\,\delta^3(\boldsymbol{x}) + \gamma_3^{\times}\,\delta(\boldsymbol{x})\,{\cal G}_2(\boldsymbol{x}|\Phi_v) \\[0.5em] \hspace{-0.3em} + \; \gamma_3^-\,\underbrace{\Delta_3{\cal G}(\boldsymbol{x}|\Phi,\Phi_v)}_{=\,{\cal G}_2(\Phi_v)-{\cal G}_2(\Phi)} + \gamma_3\,{\cal G}_3(\boldsymbol{x}|\Phi_v) \quad \\ \hspace{-0.3em} + \; \big[\text{fourth order terms}\big] \end{array}\right\} \hspace{1.6em} \leftarrow \; \text{one-loop bias} \\[1em]
+  & \hspace{-0.3em} \underbrace{\begin{array}{c} + \; \gamma_A\,\nabla^2 \delta(\boldsymbol{x}) + \gamma_B\,\nabla^2{\cal G}_2(\boldsymbol{x}) + \gamma_C\,\nabla^2 \delta^2(\boldsymbol{x}) + \gamma_D\, \left[\boldsymbol{\nabla}\delta(\boldsymbol{x})\right]^2 \\[-2em] \color{#f0f1eb}. \end{array}}_{\displaystyle \sim k^2\,R_*^2}
+  \end{align}
+  $$
+  `
+</p>
+
+<div></div>
+<div></div>
+
+<div style="position: absolute; top: 13.4em; left: 9em; width: 390px; height: 275px; font-size:75%;    border:3px; border-style:solid; border-color:red; padding: 10px; border-radius:8px"> </div>
+
+<div style="position: absolute; top: 29.4em; left: 9em; width: 650px; height: 35px; font-size:75%;    border:3px; border-style:solid; border-color:#1a3f8b; padding: 10px; border-radius:8px"> </div>
+
+---
+
+<!-- {_style="text-align: center"}-->
+<!-- .slide: data-transition="slide-in fade-out"-->
+# Higher-Derivative Bias
+
+How important are these terms? $\;\rightarrow\;$ **Very much so!** [<span style="color:DarkTurquoise">Fujita+ '16, Nadler+ '17</span>]
+
+<div class="fragment">
+Higher-derivative bias corrections scale as: `$\left(k\,R_*\right)^2,\;\left(k\,R_*\right)^4,\;\ldots$` <br> <span style="color:red"> (degenerate with contributions from EFT) </span>
+</div§>
+
+<div class="fragment" style="position: absolute; top: 10em; left: 50%; width: 1000px; height: 600px; margin: 0 0 0 -500px;">
+  <p style="border:2px solid black; padding:3px; border-radius:8px">
+    `
+    $$
+    \begin{align}
+    \delta B_{123} =\;&- \left[\gamma_A \left(k_1^2+k_2^2\right) + \gamma_B\,k_3^2\right] F_2(\boldsymbol{k}_1,\boldsymbol{k}_2)\,P_{L,1}\,P_{L,2} + \text{cyc.} \\
+    &- \left[\gamma_C \left(k_1^2+k_2^2\right) + \gamma_D\,k_3^2\right] G_2(\boldsymbol{k}_1,\boldsymbol{k}_2)\,P_{L,1}\,P_{L,2} + \text{cyc.} \\
+    &- \gamma_E\,(\boldsymbol{k}_1 \cdot \boldsymbol{k}_2)\,P_{L,1}\,P_{L,2} + \text{cyc.} \\
+    & + N_1 \left(k_1^2+k_2^2+k_3^2\right) + \left[N_2\,k_1^2 + N_3\left(k_2^2+k_3^2\right)\right]\,P_{L,1} + \text{cyc.}
+    \end{align}
+    $$
+    `
+  </p>
+</div>
+
+---
+
+<!-- {_style="text-align: center"}-->
+<!-- .slide: data-transition="fade-in slide-out"-->
+# Higher-Derivative Bias
+
+How important are these terms? $\;\rightarrow\;$ **Very much so!** [<span style="color:DarkTurquoise">Fujita+ '16, Nadler+ '17</span>]
+
+Higher-derivative bias corrections scale as: `$\left(k\,R_*\right)^2,\;\left(k\,R_*\right)^4,\;\ldots$` <br> <span style="color:red"> (degenerate with contributions from EFT) </span>
+
+<div style="position: absolute; top: 10em; left: 50%; width: 1000px; height: 600px; margin: 0 0 0 -500px;">
+  <p style="border:2px solid black; padding:3px; border-radius:8px">
+    `
+    $$
+    \begin{align}
+    \delta B_{123} =\;&- \left[\color{red}\gamma_A\color{black} \left(k_1^2+k_2^2\right) + \color{red}\gamma_B\color{black}\,k_3^2\right] F_2(\boldsymbol{k}_1,\boldsymbol{k}_2)\,P_{L,1}\,P_{L,2} + \text{cyc.} \\
+    &- \left[\color{red}\gamma_C\color{black} \left(k_1^2+k_2^2\right) + \color{red}\gamma_D\color{black}\,k_3^2\right] G_2(\boldsymbol{k}_1,\boldsymbol{k}_2)\,P_{L,1}\,P_{L,2} + \text{cyc.} \\
+    &- \color{red}\gamma_E\color{black}\,(\boldsymbol{k}_1 \cdot \boldsymbol{k}_2)\,P_{L,1}\,P_{L,2} + \text{cyc.} \\
+    & + \color{red}N_1\color{black} \left(k_1^2+k_2^2+k_3^2\right) + \left[\color{red}N_2\color{black}\,k_1^2 + \color{red}N_3\color{black}\left(k_2^2+k_3^2\right)\right]\,P_{L,1} + \text{cyc.}
+    \end{align}
+    $$
+    `
+  </p>
+</div>
+
+<hr style="height:8em; visibility:hidden;"/>
+
+<hr>
+
+<hr style="height:0.2em; visibility:hidden;"/>
+<ul>
+  <li> 3 tree-level bias parameters </li>
+  <li> 5 new <b>higher-derivative/EFT parameters</b>
+  <li> 5 noise parameters
+</ul>
+
+<p style="color:red" class="fragment" data-fragment-index="6">
+  `$\Rightarrow \hspace{0.3em}$` 13 free parameters for the <b>bispectrum only</b>
+</p>
+
+
 
 ---
 
@@ -953,7 +1114,7 @@ In the <b>Multi-point Propagator</b> expansion, there are only three distinct di
 
 <!-- .slide: data-background-color="#1a3f8b"-->
 <!-- {_style="text-align: center"}-->
-# <span style="color:#f0f1eb"> <b>Summary</b> </span>
+# <span style="color:#f0f1eb"> <b>Summary and Outlook</b> </span>
 
 ---
 
@@ -978,6 +1139,9 @@ In the <b>Multi-point Propagator</b> expansion, there are only three distinct di
 </ul>
 
 
+ <!-- Note:
+ - this is not the end of the story, it's rather the beginning because now we would like to apply to data, for that further steps necessary -->
+
 ---
 
 <!-- {_style="text-align: center"}-->
@@ -986,15 +1150,11 @@ In the <b>Multi-point Propagator</b> expansion, there are only three distinct di
 <hr style="height:1em; visibility:hidden;"/>
 <ul>
   <li>
-    What about <b>spatial non-locality</b>? `$\hspace{0.5em} \rightarrow \hspace{0.3em}$` higher derivatives:
-    <p>
-      `
-      $$
-      \Rightarrow \hspace{0.5em} 1) \hspace{0.2em} \nabla^2\delta^{(2)}\,, \hspace{1em} 2) \hspace{0.2em} \nabla^2{\cal G}_2\,, \hspace{1em} 3) \hspace{0.2em} \nabla^2\Big(\delta^{(1)}\Big)^2\,, \hspace{1em} 4) \hspace{0.2em} \Big(\boldsymbol{\nabla}\delta^{(1)}\Big)^2
-      $$
-      `
-    </p>
-    Also need to include EFT and additional noise parameters: <br> 8 new <b>free parameters in total!</b>
+    Include <b>redshift space distortions</b> (along the lines of <span style="color:DarkTurquoise">Scoccimarro '04</span>)
+  </li>
+  <hr style="height:0.5em; visibility:hidden;"/>
+  <li>
+    Write a faster likelihood code, using technique presented in <span style="color:DarkTurquoise">Simonovic+ '17</span>
   </li>
   <hr style="height:0.5em; visibility:hidden;"/>
   <li>
